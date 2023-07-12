@@ -8,7 +8,7 @@ namespace ProblematicLibrary
 {
     public enum StatusCode
     {
-        Error,
-        Success
+        Success,
+        Error        
     }
 }

@@ -14,12 +14,12 @@ namespace ProblematicProblemLevel2.Interaction
             switch (statusCode)
             {
                 case StatusCode.Error:
-                    ColorSwap(ConsoleColor.Green);                    
+                    ColorSwap(ConsoleColor.Red);                    
                     Console.WriteLine(message);
                     ResetColor();
                     break;
                 case StatusCode.Success:
-                    ColorSwap(ConsoleColor.Red);                    
+                    ColorSwap(ConsoleColor.Green);                    
                     Console.WriteLine(message);
                     ResetColor();
                     break;

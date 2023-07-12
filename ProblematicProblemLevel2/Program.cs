@@ -42,6 +42,17 @@ namespace ProblematicProblemLevel2
 
             PassMessage("Wait... how old were they again?");
             c.Age = GetUserAge();
+
+            // Using DateTime ... cuz it's interesting. :)
+            // Also, this doesn't outright pay attention to what the user input in the beginning.
+            // But, allows them to have fun inputting data... just for the kicks.
+            // Instead, takes the Today's Date and subtracts it with their Date of Birth.
+            // That way, we keep accuracy!! :D
+            DateTime today = DateTime.UtcNow;
+            TimeSpan difference = today - dob;
+            var num = (int)difference.TotalDays;
+            int realAge = (num / 30) / 12;
+            c.Age = realAge;
             NewLine();
 
             PassMessage("Oh okay cool, I'll notate that.");
@@ -65,9 +76,9 @@ namespace ProblematicProblemLevel2
             NewLine();
 
             PassMessage($"Addition: {x} + {y} = {calculator.Add(x, y)}");
-            PassMessage($"Subtraction: {x} + {y} = {calculator.Multiply(x, y)}");
-            PassMessage($"Multiplication: {x} + {y} = {calculator.Divide(x, y)}");
-            PassMessage($"Division: {x} + {y} = {calculator.Subtract(x, y)}");
+            PassMessage($"Subtraction: {x} - {y} = {calculator.Subtract(x, y)}");
+            PassMessage($"Multiplication: {x} * {y} = {calculator.Multiply(x, y)}");
+            PassMessage($"Division: {x} / {y} = {calculator.Divide(x, y)}");
             NewLine();
 
             PassMessage("Isn't math fun!", StatusCode.Success);            
