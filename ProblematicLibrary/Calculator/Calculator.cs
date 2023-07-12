@@ -17,18 +17,18 @@ namespace ProblematicLibrary.Calculator
         {
             if (y != 0)
             {
-                return y / x;
+                return x / y;
             }
             else
             {
-                return 0;
+                return -1;
             }
             
         }
 
         public double Multiply(double x, double y)
         {
-            return x * y;
+            return Math.Round(x * y);
         }
 
         public double Subtract(double x, double y)
